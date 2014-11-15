@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My App Engine Quiz</title>
+  </head>
+  <body>
+    <h1>Quiz for {{name}}</h1>
+    <form action="grade_quiz">
+      <p><input name='name' type = 'hidden' value= {{name}}>
+		  <label>What is 3 + 4?
+         <input name="addition"></label></p>
+      <p><label>What is the capital of California?
+         <input name="capital"></label></p>
+      <p><button>Grade quiz</button></p>
+    </form>
+  </body>
+</html>

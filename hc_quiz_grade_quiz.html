@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quiz {{success}}!</title>
+  </head>
+  <body>
+    <h1>Graded quiz for {{name}}</h1>
+    <!-- Woah! More new stuff! See
+         http://jinja.pocoo.org/docs/templates/
+         for details. -->
+    {% if wrong_answers %}
+       {% for wrong_answer in wrong_answers %}
+         <p>
+           You guessed that
+           {{wrong_answer.question}}
+           was
+           {{wrong_answer.guess}}
+           but it's actually
+           {{wrong_answer.correct}}.
+         </p>
+      {% endfor %}
+    {% else %}
+      <b>You got everything right!</b>
+    {% endif %}
+    <p><a href="/">Try again</a></p>
+  </body>
+</html>
